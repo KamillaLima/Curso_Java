@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author kamil
+ *
+ */
+module Básicop {
+}
