@@ -11,44 +11,45 @@ public class MainHotel_ex93 {
 		do {
 			System.out.println("Informe a quantidade de quartos necessária: ");
 			qtdAlugar = sc.nextInt();
-		}while(qtdAlugar<=0);
-		
+		} while (qtdAlugar <= 0);
+
 		for (int i = 0; i < qtdAlugar; i++) {
-			String nome="" ;
+			String nome = "";
 			String email;
 			int numQuarto;
-
+			System.out.println();
 			do {
 				System.out.println("Informe o Nome: ");
 				nome = sc.nextLine();
-			}while(nome=="");
-			
+			} while (nome == "");
+
 			do {
 				System.out.println("Informe o email: ");
 				email = sc.next();
-			}while(email==null);
-			
-			
+			} while (email == null);
+
 			do {
 				System.out.println("Quarto a ser alugado : ");
 				numQuarto = sc.nextInt();
-			}while(numQuarto<=-1 || numQuarto>=11);
-			
-			clientes[numQuarto] = new ClientesHotel_ex93(nome,email,numQuarto);
-		}
-		
-	
-		
-		for (int i = 0; i < clientes.length; i++) {
-			if(clientes[i].getNome()!="") {
-				System.out.println(clientes[i].getNome());
-				System.out.println(clientes[i].getQuarto());
-			}
-			
-		}
-		
-	}
-	
+			} while (numQuarto <= -1 || numQuarto >= 11);
+			clientes[numQuarto] = new ClientesHotel_ex93(nome, email, numQuarto);
 
+		}
+
+		for (int i = 0; i < clientes.length; i++) {
+			if (clientes[i] != null) {
+				/*
+				 * o clientes[i] verá se naquele vetor ele está diferente de nulo,ou seja,se tem
+				 * algo dentro dele
+				 */
+				System.out.print("Nome: " + clientes[i].getNome() + ", quarto: " + clientes[i].getQuarto());
+
+			}
+
+			sc.close();
+
+		}
+
+	}
 
 }
