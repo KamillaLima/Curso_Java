@@ -1,5 +1,6 @@
 package br.com.curso.onze;
 
+
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -46,21 +47,28 @@ public class InstanciarDatas {
 		
 		/*FORMATO CUSTOMIZADO*/
 		//primeiro eu preciso especificar o formato que a minha data terá
-		DateTimeFormatter formatacao = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		LocalDate dataFormatada = LocalDate.parse("19/03/2004",formatacao);
+		DateTimeFormatter formatacao = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+		LocalDate dataFormatada = LocalDate.parse("19-03-2004",formatacao);
 		//passo a data e logo em seguida o objeto de formatação que eu criei
-		System.out.println(dataFormatada);
+		System.out.println("data q eu to com duvida" + dataFormatada);
 		//ele ainda printa no formato ISO ! 
+		
+		
+		
+		
+		
+		String datasla = dataFormatada.toString();
+		System.out.println(datasla);
 		
 		//posso tanto instanciar um objeto para salvar o formato da data,como eu posso já passar direto ela como parametro 
 		LocalDateTime formatacaoDataHora = LocalDateTime.parse("08/12/2011 19:30", DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
-		System.out.println(formatacaoDataHora);
-		
-		
-		
+		System.out.println(  "data q eu to com duvida :  " + formatacaoDataHora);
 		
 		LocalDate dataSeparada = LocalDate.of(2000, 11, 23);
 		LocalDateTime dataHoraSeparada = LocalDateTime.of(2012, 9, 22, 14, 55);
+		
+		
+		
 					
 	}
 
